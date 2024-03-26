@@ -1,0 +1,21 @@
+<div class="container">
+  <ul>
+    <li class="emp-header">
+      <div class="td-cell"> S.NO</div>
+      <div class="td-cell">First Name</div>
+      <div class="td-cell"> City</div>
+      <div class="td-cell"> EmailId</div>
+      <div class="td-cell">Actions</div>
+    </li>
+    <li *ngFor="let emp of empList;index as i" class="emp-row">
+      <div class="td-cell"> {{i+1}}</div>
+      <div class="td-cell"> {{emp.firstName}}</div>
+      <div class="td-cell"> {{emp.lastName}}</div>
+      <div class="td-cell"> {{emp.emailId}}</div>
+      <div class="td-cell"><span class="link "
+          (click)="editEmployee(emp)">Edit</span>
+          <span class="link" style="color:red; margin-left: 10px" (click)="deleteEmployee(emp)">Delete</span>
+        </div>
+    </li>
+  </ul>
+</div>
